@@ -8,6 +8,7 @@ import createError from 'http-errors';
 
 import { Router } from "./routes";
 import { PORT, ENVIRONMENT } from "./util/secrets";
+import HttpException from './core/exception/http';
 
 // Create Express server
 const app = express();
@@ -31,7 +32,7 @@ app.use((req, res, next) => {
     next(createError(404));
 });
 
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: HttpException, req: Request, res: Response, next: NextFunction) => {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};

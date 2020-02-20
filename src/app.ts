@@ -7,7 +7,7 @@ import logger from 'morgan';
 import createError from 'http-errors';
 
 import { Router } from "./routes";
-import { PORT, ENVIRONMENT } from "./util/secrets";
+import { PORT } from "./util/secrets";
 import HttpException from './core/exception/http';
 
 // Create Express server

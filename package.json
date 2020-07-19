@@ -48,7 +48,7 @@
     "http-errors": "^1.7.3",
     "jwt-simple": "^0.5.6",
     "knex": "^0.20.10",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lusca": "^1.6.1",
     "morgan": "^1.9.1",
     "nodemailer": "^6.4.2",
